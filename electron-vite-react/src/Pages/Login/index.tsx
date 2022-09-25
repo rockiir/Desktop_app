@@ -1,37 +1,34 @@
-
-import { useEffect, useState } from 'react';
 import React from 'react'
-import { Button } from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
+import './login.css'
+import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
 
-const ButtonExampleButton = () => <Button>Click Here</Button>
+const Login = () => (
+  <div className="container">
+      <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+  <Grid.Column style={{ maxWidth: '40%', maxHeight:'80%'}}>
+    <Header as='h2' color='blue' textAlign='left'>
+      <Image src='/public/electron.png' /> Login
+    </Header>
+    <Form size='large'>
+      <Segment stacked>
+        <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+        <Form.Input
+          fluid
+          icon='lock'
+          iconPosition='left'
+          placeholder='Password'
+          type='password'
+        />
 
-function Login() {
+        <Button color='blue' fluid size='large'>
+          Login
+        </Button>
+      </Segment>
+    </Form>
 
-    return (
-
-        <>
-
-  <link
-    async
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/semantic-ui@2/dist/semantic.min.css"
-  />
-  <script src="https://cdn.jsdelivr.net/npm/semantic-ui-react/dist/umd/semantic-ui-react.min.js"></script>
-
-  <script src="like_button.js"></script>
-
-  <button class="ui button" style={{backgroundColor: "red"}}>oi Here</button>
-
-<h1>hello</h1>
-
-        </>
-            )
-        }
-
-
-
-
-
-
-
+  </Grid.Column>
+  </Grid>
+  </div>
+)
 export default Login
