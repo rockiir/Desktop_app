@@ -2,6 +2,7 @@ import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import './login.css'
 import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
+import {HashRouter,Link,Route} from "react-router-dom";
 
 const Login = () => (
   <div className="container">
@@ -12,13 +13,14 @@ const Login = () => (
     </Header>
     <Form size='large'>
       <Segment stacked>
-        <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' />
+        <Form.Input fluid icon='user' iconPosition='left' placeholder='E-mail address' type='email' required/>
         <Form.Input
           fluid
           icon='lock'
           iconPosition='left'
           placeholder='Password'
           type='password'
+          required
         />
 
         <Button color='blue' fluid size='large'>
@@ -29,6 +31,7 @@ const Login = () => (
 
   </Grid.Column>
   </Grid>
+
   </div>
 )
 export default Login
