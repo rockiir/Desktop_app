@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import 'semantic-ui-css/semantic.min.css'
 //import './login.css'
 import { Button, Form, Grid, TextArea, Select, Input, Header } from 'semantic-ui-react'
-import { HashRouter, Link, Route } from "react-router-dom";
+
+
 
 
 const options = [

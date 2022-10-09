@@ -2,14 +2,15 @@ import React from 'react'
 import 'semantic-ui-css/semantic.min.css'
 import './login.css'
 import { Button, Form, Grid, Header, Image, Segment } from 'semantic-ui-react'
-import {HashRouter,Link,Route} from "react-router-dom";
+import {Link } from "react-router-dom";
 
 const Login = () => (
-  <div className="container">
+  <div className="container" >
+
       <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
   <Grid.Column style={{ maxWidth: '40%', maxHeight:'80%'}}>
     <Header as='h2' color='blue' textAlign='left'>
-      <Image src='/public/electron.png' /> Login
+      <Image src='/electron.png' /> Login
     </Header>
     <Form size='large'>
       <Segment stacked>
@@ -22,14 +23,18 @@ const Login = () => (
           type='password'
           required
         />
+<Link to="/Home">
 
-        <Button color='blue' fluid size='large'>
+
+        <Button color='blue' fluid size='large' >
           Login
         </Button>
+</Link>
       </Segment>
     </Form>
 
   </Grid.Column>
+
   </Grid>
 
   </div>
